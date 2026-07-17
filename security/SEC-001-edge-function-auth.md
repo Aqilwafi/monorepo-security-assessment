@@ -59,7 +59,7 @@ Aktifkan opsi Verify JWT pada Edge Function agar setiap request wajib menyertaka
     ```
 #### Evidence 5
 - Source: Log Supabase
-- Log / Screenshot: Log server mencatat error 500 atas request Github Actions.
+- Log / Screenshot: Log server mencatat error 500 yang diharapkan atas request Github Actions.
     ```json
     Log Edge Function:
     {
@@ -77,3 +77,4 @@ Aktifkan opsi Verify JWT pada Edge Function agar setiap request wajib menyertaka
 ## Validations
 - [x] **Dashboard Integrity:** Opsi *Verify JWT* terkonfirmasi aktif pada Supabase Dashboard.
 - [x] **Negative Test (Tanpa Token):** Request tanpa `Authorization` header menghasilkan error `401 Unauthorized`.
+- [x] **Normal Test (Github Actions):** Request Github Action menggunakan JWT sudah berjalan normal dengan `500 Server Error` akbiat proteksi RLS `Access Denied`.
