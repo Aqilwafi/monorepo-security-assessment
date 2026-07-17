@@ -5,7 +5,7 @@
 
 ## Scope
 - Repository: spmb-baitunnaim
-- Component: Supabase Edge Function (`keepalive`)
+- Component: Supabase Edge Function
 - Environment: Staging
 
 ## Status
@@ -42,7 +42,7 @@ Aktifkan opsi Verify JWT pada Edge Function agar setiap request wajib menyertaka
 - Source: Terminal WSL
 - Log / Screenshot: cURL tanpa Authorization header (JWT) menghasilkan error 401.
     ```bash
-    ~$ curl -L -X POST 'https://rywammolujagaasauldp.supabase.co/functions/v1/keepalive' \
+    ~$ curl -L -X POST 'https://<supabase-projek>/functions/v1/<function-name>' \
     -H 'Content-Type: application/json' \
     --data '{"name":"Functions"}' -w "\n"
     {"code":"UNAUTHORIZED_NO_AUTH_HEADER","message":"Missing authorization header"}
@@ -54,7 +54,7 @@ Aktifkan opsi Verify JWT pada Edge Function agar setiap request wajib menyertaka
     {
         "headers_user_agent": "curl/8.5.0",
         "client_ip": "114.5.232.106",
-        "event_message": "POST | 401 | https://rywammolujagaasauldp.supabase.co/functions/v1/keepalive"
+        "event_message": "POST | 401 | https://<supabase-projek>/functions/v1/<function-name>"
     }
     ```
 #### Evidence 5
@@ -65,13 +65,13 @@ Aktifkan opsi Verify JWT pada Edge Function agar setiap request wajib menyertaka
     {
         "client_ip":"20.109.95.98",
         "client_timezone": "America/New_York",
-        "event_message": "POST | 500 | https://rywammolujagaasauldp.supabase.co/functions/v1/keepalive"
+        "event_message": "POST | 500 | https://<supabase-projek>/functions/v1/<function-name>"
     }
 
     Log Postgres:
     {
         "backend_type": "client backend",
-        "event_message": "permission denied for table master_tahun_ajaran"
+        "event_message": "permission denied for table <nama-tabel>"
     }
     ```
 ## Validations
