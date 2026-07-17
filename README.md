@@ -2,6 +2,9 @@
 
 Repo ini berisi dokumentasi hasil security assessment dalam format temuan yang konsisten.
 
+## Daftar Temuan
+- `SEC-001` — [Edge Function Authentication](security/SEC-001-edge-function-auth.md): opsi *Verify JWT* dinonaktifkan sehingga endpoint dapat diakses tanpa JWT. (Sudah diperbaiki.)
+
 ## Struktur
 - `security/` : Daftar temuan security (mis. `SEC-001-*`).
 
@@ -13,9 +16,3 @@ Setiap temuan mengikuti pola:
 - **Impact**: dampak jika dibiarkan
 - **Recommendation / Remediation**: langkah perbaikan
 - **Evidence**: bukti sebelum/sesudah (log, screenshot, referensi)
-
-## Daftar Temuan
-- `SEC-001` — [Edge Function Authentication](security/SEC-001-edge-function-auth.md): opsi *Verify JWT* dinonaktifkan sehingga endpoint dapat diakses tanpa JWT. (Sudah diperbaiki.)
-
-
-
