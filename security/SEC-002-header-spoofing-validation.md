@@ -98,7 +98,7 @@ Jika konfigurasi deployment berubah dan aplikasi dapat menerima request langsung
 - Source: Terminal WSL
 - Description: cURL IP publik.
 
-    ```cmd
+    ```ps
     ~$ curl ifconfig.me; echo
     114.5.232.106
     ```

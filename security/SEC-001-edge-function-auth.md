@@ -41,7 +41,7 @@ Aktifkan opsi Verify JWT pada Edge Function agar setiap request wajib menyertaka
 #### Evidence 3
 - Source: Terminal WSL
 - Log / Screenshot: cURL tanpa Authorization header (JWT) menghasilkan error 401.
-    ```bash
+    ```ps
     ~$ curl -L -X POST 'https://<supabase-projek>/functions/v1/<function-name>' \
     -H 'Content-Type: application/json' \
     --data '{"name":"Functions"}' -w "\n"
