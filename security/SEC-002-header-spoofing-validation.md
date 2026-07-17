@@ -1,4 +1,4 @@
-# SEC-002 - Login Audit IP Header Spoofing Validation
+# SEC-002 - Header Spoofing Validation
 
 - ditemukan: 17/07/2026
 - diperbaiki: N/A
@@ -79,17 +79,26 @@ Jika konfigurasi deployment berubah dan aplikasi dapat menerima request langsung
     X-Forwarded-For: 127.0.0.1, 8.8.8.8
     X-Real-IP: 127.0.0.1
     Forwarded: for=127.0.0.1
-    ````
+    ```
 
 #### Evidence 3
 - Source: Vercel Log
 - Description: Server tetap mencatat IP aktual dan tidak menggunakan nilai spoofed header.
 
-    ```bash
-    2026-07-17 08:47:41.946 [info] LOGIN AUDIT {
-                            ip: '202.137.7.142',
-                            userAgent: 'Pentester?',
-                            forwardedFor: '202.137.7.142',
-                            realIp: '202.137.7.142'
-                            }
+    ```sh
+    2026-07-17 09:15:56.970 [info] LOGIN AUDIT {
+                                                ip: '114.5.232.106',
+                                                userAgent: 'Pentester?',
+                                                forwardedFor: '114.5.232.106',
+                                                realIp: '114.5.232.106'
+                                            }
+    ```
+
+#### Evidence 4
+- Source: Terminal WSL
+- Description: cURL IP publik.
+
+    ```cmd
+    ~$ curl ifconfig.me; echo
+    114.5.232.106
     ```

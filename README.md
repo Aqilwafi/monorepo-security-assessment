@@ -4,6 +4,7 @@ Repo ini berisi dokumentasi hasil security assessment dalam format temuan yang k
 
 ## Daftar Temuan
 - `SEC-001` — [Edge Function Authentication](security/SEC-001-edge-function-auth.md): opsi *Verify JWT* dinonaktifkan sehingga endpoint dapat diakses tanpa JWT. (Sudah diperbaiki.)
+- `SEC-001` — [Header Spoofing Validation](security/SEC-002-header-spoofing-validation.md): IP yang diterima oleh aplikasi tidak menggunakan nilai yang dikirim oleh client.
 
 ## Struktur
 - `security/` : Daftar temuan security (mis. `SEC-001-*`).
