@@ -1,6 +1,7 @@
 # Monorepo Security Assessment
 
 Repo ini berisi dokumentasi hasil security assessment dalam format temuan yang konsisten.
+repo: https://github.com/Aqilwafi/spmb-baitunnaim.git
 
 ## Daftar Temuan
 
